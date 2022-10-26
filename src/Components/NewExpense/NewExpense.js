@@ -1,3 +1,4 @@
+import Card from "../UI/Card";
 import NewExpenseForm from "./NewExpenseForm";
 import "./NewExpense.css";
 
@@ -7,9 +8,9 @@ const NewExpense = (props) => {
   };
 
   return (
-    <div className="new-expense">
+    <Card className="new-expense">
       <NewExpenseForm onAddExpense={newExpenseHandler} />
-    </div>
+    </Card>
   );
 };
 
