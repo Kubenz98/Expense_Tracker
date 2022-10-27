@@ -4,31 +4,37 @@ import ChartBar from "./ChartBar";
 
 const Chart = (props) => {
   let dataPoints = [
-    { label: "Jan", value: 0 },
-    { label: "Feb", value: 0 },
-    { label: "Mar", value: 0 },
-    { label: "Apr", value: 0 },
-    { label: "May", value: 0 },
-    { label: "Jun", value: 0 },
-    { label: "Jul", value: 0 },
-    { label: "Aug", value: 0 },
-    { label: "Sep", value: 0 },
-    { label: "Oct", value: 0 },
-    { label: "Nov", value: 0 },
-    { label: "Dec", value: 0 },
+    { label: "1", value: 0 },
+    { label: "2", value: 0 },
+    { label: "3", value: 0 },
+    { label: "4", value: 0 },
+    { label: "5", value: 0 },
+    { label: "6", value: 0 },
+    { label: "7", value: 0 },
+    { label: "8", value: 0 },
+    { label: "9", value: 0 },
+    { label: "10", value: 0 },
+    { label: "11", value: 0 },
+    { label: "12", value: 0 },
   ];
 
   for (const item of props.expenses) {
     const month = item.date.getMonth();
-    dataPoints[month].value += (item.amount*1);
+
+    dataPoints[month].value += item.amount * 1;
   }
-    const dataPointValues = dataPoints.map(datapoint => datapoint.value);
-    const totalMaximum = Math.max(...dataPointValues);
-    
+  const dataPointValues = dataPoints.map((datapoint) => datapoint.value);
+  const totalMaximum = Math.max(...dataPointValues);
+
   return (
     <div className="chart">
       {dataPoints.map((dataPoint) => (
-        <ChartBar key={dataPoint.label} label={dataPoint.label} value={dataPoint.value} maxValue={totalMaximum} />
+        <ChartBar
+          key={dataPoint.label}
+          label={dataPoint.label}
+          value={dataPoint.value}
+          maxValue={totalMaximum}
+        />
       ))}
     </div>
   );
