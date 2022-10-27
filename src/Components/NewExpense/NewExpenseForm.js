@@ -24,11 +24,15 @@ const NewExpenseForm = (props) => {
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
+    if(!enteredTitle || !enteredAmount || !enteredDate) {
+      return alert("Invalid expense! Fill all inputs!")
+    }
     props.onAddExpense(newExpense);
 
     setTitle("");
     setAmount("");
     setDate("");
+    props.onChangeEdit();
   };
 
   return (
@@ -64,6 +68,9 @@ const NewExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onChangeEdit}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>

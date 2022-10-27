@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Card from "../UI/Card";
 import NewExpenseForm from "./NewExpenseForm";
 import "./NewExpense.css";
@@ -7,9 +8,18 @@ const NewExpense = (props) => {
     props.onAddExpense(expense);
   };
 
+  const [isEditing, setIsEditing] = useState(false);
+
+  const editingHandler = () => {
+    setIsEditing(!isEditing);
+  };
+
   return (
     <Card className="new-expense">
-      <NewExpenseForm onAddExpense={newExpenseHandler} />
+      {isEditing && <NewExpenseForm onAddExpense={newExpenseHandler} onChangeEdit={editingHandler}/>}
+      <div className="new-expense__controls">
+        {!isEditing && <button type="button" onClick={editingHandler}>Add New Expense</button>}
+      </div>
     </Card>
   );
 };

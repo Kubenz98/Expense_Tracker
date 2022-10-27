@@ -1,56 +1,56 @@
 .new-expense__controls {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .new-expense__control {
-    margin-bottom: 10px;
-  }
-  
-  .new-expense__control label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 22px;
-  }
-  
-  .new-expense__control input {
-    font-size: 20px;
-    padding: 5px;
-    margin-right: 20px;
-    width: 280px;
-    max-width: 100%;
-    border-radius: 6px;
-    border: none;
-  }
-  
-  .new-expense__control input:focus-visible {
-    outline: none;
-  }
-  
-  .new-expense__control input:hover {
-    background-color: #ccc;
-  }
-  .new-expense__control input:focus {
-    background-color: #ccc;
-  }
-  
-  .new-expense__actions {
-    width: 100%;
-    text-align: right;
-  }
-  
-  .new-expense__actions button {
-    font-size: 24px;
-    margin-top: 30px;
-    padding: 10px 15px;
-    color: white;
-    background-color: #7410b8;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .new-expense__actions button:hover {
-    background-color: #561185;
-  }
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.new-expense__control {
+  margin-bottom: 10px;
+}
+
+.new-expense__control label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.new-expense__control input {
+  font-size: 20px;
+  padding: 5px;
+  margin-right: 20px;
+  width: 280px;
+  max-width: 100%;
+  border-radius: 6px;
+  border: none;
+}
+
+.new-expense__control input:focus-visible {
+  outline: none;
+}
+
+.new-expense__control input:hover {
+  background-color: #ccc;
+}
+.new-expense__control input:focus {
+  background-color: #ccc;
+}
+
+.new-expense__actions {
+  width: 100%;
+  text-align: right;
+}
+
+.new-expense__actions button {
+  font-size: 18px;
+  margin: 30px 20px 0 auto;
+  padding: 10px 15px;
+  color: white;
+  background-color: #7410b8;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.new-expense__actions button:hover {
+  background-color: #561185;
+}
