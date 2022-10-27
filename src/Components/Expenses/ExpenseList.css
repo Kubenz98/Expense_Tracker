@@ -1,3 +1,7 @@
 .expenses__list {
     list-style: none;
   }
+
+  .expenses__list h2 {
+    text-align: center;
+  }
