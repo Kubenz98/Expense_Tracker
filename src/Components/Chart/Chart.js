@@ -23,12 +23,12 @@ const Chart = (props) => {
     dataPoints[month].value += (item.amount*1);
   }
     const dataPointValues = dataPoints.map(datapoint => datapoint.value);
-    const sum = dataPointValues.reduce((a,b) => a+b, 0);
+    const totalMaximum = Math.max(...dataPointValues);
     
   return (
     <div className="chart">
       {dataPoints.map((dataPoint) => (
-        <ChartBar key={dataPoint.label} label={dataPoint.label} value={dataPoint.value} allValues={sum} />
+        <ChartBar key={dataPoint.label} label={dataPoint.label} value={dataPoint.value} maxValue={totalMaximum} />
       ))}
     </div>
   );
