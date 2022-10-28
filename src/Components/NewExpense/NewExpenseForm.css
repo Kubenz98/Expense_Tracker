@@ -44,13 +44,15 @@
   margin: 30px 20px 0 auto;
   padding: 10px 15px;
   color: white;
-  background-color: #7410b8;
+  background-color: #6750c4;
   border-radius: 10px;
   border: none;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
-.new-expense__actions button:hover {
-  background-color: #561185;
+@media (hover: hover) and (pointer: fine) {
+  .new-expense__actions button:hover {
+    background-color: #5029e9;
+  }
 }

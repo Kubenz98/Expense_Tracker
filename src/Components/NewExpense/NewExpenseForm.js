@@ -17,7 +17,7 @@ const NewExpenseForm = (props) => {
   };
 
   const submitExpense = (event) => {
-    event.preventDefault();
+    event.preventDefault();    
     const newExpense = {
       id: Math.random(),
       title: enteredTitle,

@@ -1,8 +1,7 @@
 .expense-item {
   display: flex;
   margin: 10px 0;
-  padding: 15px;
-  background-color: rgb(90, 90, 90);
+  gap: 10px;
   border-radius: 10px;
 }
 
@@ -11,16 +10,17 @@
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  margin: 0 15px;
+  padding: 5px 15px;
+  background-color: rgb(60, 60, 60);
 }
 .expense-item__description h2 {
   font-size: 28px;
+  white-space: nowrap;
 }
 .expense-item__price {
-  padding: 10px 25px;
+  padding: 10px 20px;
   border-radius: 16px;
-  background-color: rgb(101, 11, 161);
-  border: 3px solid rgb(211, 201, 201);
+  background-color: #6750C4;
   font-size: 24px;
   font-weight: bold;
 }
@@ -29,15 +29,26 @@
   .expense-item__description {
     flex-direction: column-reverse;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
   }
   .expense-item__price {
-    padding: 5px 20px;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
     font-size: 22px;
   }
 
   .expense-item__description h2 {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .expense-item__price {
+    font-size: 20px;
+  }
+  .expense-item__description h2 {
+    font-size: 18px;
   }
 }
 
@@ -47,6 +58,6 @@
   }
   .expense-item__price {
     font-size: 18px;
-    padding: 10px 15px;
+    padding: 5px 0;
   }
 }

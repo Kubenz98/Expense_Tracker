@@ -5,8 +5,7 @@
     align-items: center;
     flex: 0 0 90px;
     height: 90px;
-    background-color: rgb(50, 50, 50);
-    border: 2px solid rgb(211, 201, 201);
+    background-color: rgb(60, 60, 60);
     border-radius: 10px;
   }
   .expense-date__month {
