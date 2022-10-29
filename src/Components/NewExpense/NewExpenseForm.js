@@ -17,10 +17,15 @@ const NewExpenseForm = (props) => {
   };
 
   const submitExpense = (event) => {
-    event.preventDefault();    
+    event.preventDefault();
+    if(enteredTitle.trim().length <= 0) {
+      alert("Enter a valid title, please.")
+      return
+      
+    }
     const newExpense = {
       id: Math.random(),
-      title: enteredTitle,
+      title: enteredTitle.trim(),
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
